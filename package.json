@@ -1,0 +1,20 @@
+{
+  "name": "diogen737.github.io",
+  "version": "1.0.0",
+  "description": "Personal site",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogen737/diogen737.github.io.git"
+  },
+  "author": "Oleg Musienko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diogen737/diogen737.github.io/issues"
+  },
+  "homepage": "https://diogen737.github.io",
+  "dependencies": {
+    "materialize-css": "1.0.0"
+  }
+}
