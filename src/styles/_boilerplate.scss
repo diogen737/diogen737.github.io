@@ -94,14 +94,6 @@ textarea {
   padding: 0.2em 0;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
 /*
  * Hide visually and from screen readers
  */
@@ -182,23 +174,6 @@ textarea {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
@@ -263,3 +238,103 @@ textarea {
   }
 }
 
+/*
+* Fonts setup
+*
+* TODO: remove unused
+*/
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Mono Thin'), local('RobotoMono-Thin'),
+       url(../fonts/roboto-mono-v7-latin-100.woff2) format('woff2'),
+       url(../fonts/roboto-mono-v7-latin-100.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 100;
+  src: local('Roboto Mono Thin Italic'), local('RobotoMono-ThinItalic'),
+       url(../fonts/roboto-mono-v7-latin-100italic.woff2) format('woff2'),
+       url(../fonts/roboto-mono-v7-latin-100italic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Mono Light'), local('RobotoMono-Light'),
+       url(../fonts/roboto-mono-v7-latin-300.woff2) format('woff2'),
+       url(../fonts/roboto-mono-v7-latin-300.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 300;
+  src: local('Roboto Mono Light Italic'), local('RobotoMono-LightItalic'),
+       url(../fonts/roboto-mono-v7-latin-300italic.woff2) format('woff2'),
+       url(../fonts/roboto-mono-v7-latin-300italic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Mono'), local('RobotoMono-Regular'),
+       url(../fonts/roboto-mono-v7-latin-regular.woff2) format('woff2'),
+       url(../fonts/roboto-mono-v7-latin-regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Mono Italic'), local('RobotoMono-Italic'),
+       url(../fonts/roboto-mono-v7-latin-italic.woff2) format('woff2'),
+       url(../fonts/roboto-mono-v7-latin-italic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Mono Medium'), local('RobotoMono-Medium'),
+       url(../fonts/roboto-mono-v7-latin-500.woff2) format('woff2'),
+       url(../fonts/roboto-mono-v7-latin-500.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
+       url(../fonts/roboto-mono-v7-latin-700.woff2) format('woff2'),
+       url(../fonts/roboto-mono-v7-latin-700.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 500;
+  src: local('Roboto Mono Medium Italic'), local('RobotoMono-MediumItalic'),
+       url(../fonts/roboto-mono-v7-latin-500italic.woff2) format('woff2'),
+       url(../fonts/roboto-mono-v7-latin-500italic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: local('Roboto Mono Bold Italic'), local('RobotoMono-BoldItalic'),
+       url(../fonts/roboto-mono-v7-latin-700italic.woff2) format('woff2'),
+       url(../fonts/roboto-mono-v7-latin-700italic.woff) format('woff');
+}
+
+html {
+  font-family: $font-family;
+}
