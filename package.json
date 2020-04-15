@@ -1,9 +1,8 @@
 {
   "name": "webpack-boilerplate",
   "version": "1.0.0",
-  "description": "Webpack 4 Boilerplate",
-  "main": "index.js",
-  "author": "Tania Rascia <tania@taniarascia.com>",
+  "description": "Personal site",
+  "author": "Oleg Musienko",
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
@@ -11,10 +10,8 @@
   },
   "keywords": [
     "webpack",
-    "webpack 4",
-    "webpack boilerplate",
-    "boilerplate",
-    "hmr"
+    "scss",
+    "CV"
   ],
   "devDependencies": {
     "@babel/core": "^7.9.0",
