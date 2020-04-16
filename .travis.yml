@@ -1,19 +1,20 @@
 language: node_js
 node_js:
-  - "node"
-
+- node
 branches:
   only:
   - dev
 script:
 - npm run build
 deploy:
-    provider: pages
-    github_token: $GH_TOKEN
-    local_dir: dist
-    target_branch: master
-    skip_cleanup: true
-    keep_history: true
-    verbose: true
-    on:
-        branch: dev
+  provider: pages
+  github_token: "$GH_TOKEN"
+  local_dir: dist
+  target_branch: master
+  skip_cleanup: true
+  keep_history: true
+  on:
+    branch: dev
+notifications:
+  slack:
+    secure: R8WwM/5OCcJjS7E6qMWfYgOxbTt9deE5CdL1f/ywqtZOtpd8zkwLEzat5J6jvIrrV7hKKkdGWY+6ItoyCYSeoMgirpym7ZCXUciyd6xH9+zDVAKwQARXepeen4yNtABJ/CI6+ItChuqVLhQiKIzl1nL5mPV5v5ph+oAETM+/GyWkeMe7B1Bt8KxUwGz+TNvqFBkIOB4uK9nByR9h29FomIz5So7CKvpge/obdqVIOjLlPykgEv6tKItnDyKeO4KJKCR38dQFEqrLRYJlr6J8X/fAUGnqW9bLkr+zluN+w4Uw1nmcnYrisuTMafhWESaRkTtdUTaG/YmQRybUug6ajhVC7WiI9aLfNd3A0y0snF4vBvop0/5mQ2PuRNnsq/g7fLEhMZ6aPJoCUSb4PSSbVsL2lAKLgiiNfl00Eucy5xw+1acQpQcEa80Pf/SX+Y5bh322GhUjlWNR3CXoi2iqv1ofyqeAX68mfy7rBQeM303rWlAWBktVH7oWn/IZZnzIT0K39419r7Z1XYZHWf3i+HPPDSJwJVGuzSDczo9w2p8awyPqRLZ8ue+xdczo1o/KosObekFUe32D+Oc6WfKNpTRt0/RkzD+p8QyIhNY+bGeqTma66kG1O0qC14reju/GB2WkmLSeph3W7naHLRhwLaGqzt5KwgVOQ54jHumMWJU=
