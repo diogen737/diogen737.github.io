@@ -11,6 +11,7 @@ deploy:
     provider: pages
     github_token: $GH_TOKEN
     local_dir: dist
+    target_branch: master
     skip_cleanup: true
     keep_history: true
     verbose: true
