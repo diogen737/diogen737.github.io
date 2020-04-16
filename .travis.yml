@@ -7,6 +7,12 @@ branches:
   - dev
 script:
 - npm run build
-cache:
-  directories:
-  - "node_modules"
+deploy:
+    provider: pages
+    github_token: $GH_TOKEN
+    local_dir: dist
+    skip_cleanup: true
+    keep_history: true
+    verbose: true
+    on:
+        branch: dev
