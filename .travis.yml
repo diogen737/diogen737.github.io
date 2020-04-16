@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "node"
+
+branches:
+  only:
+  - dev
+script:
+- npm run build
+cache:
+  directories:
+  - "node_modules"
