@@ -1,3 +1,5 @@
+os: linux
+dist: xenial
 language: node_js
 node_js:
 - node
@@ -8,9 +10,10 @@ script:
 - npm run build
 deploy:
   provider: pages
-  github_token: "$GH_TOKEN"
+  token: "$GH_TOKEN"
   local_dir: dist
   target_branch: master
+  strategy: git
   skip_cleanup: true
   keep_history: true
   on:
