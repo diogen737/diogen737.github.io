@@ -6,7 +6,7 @@ const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -17,10 +17,12 @@ module.exports = merge(common, {
     filename: '[name].[contenthash].bundle.js',
   },
   plugins: [
-    new CopyPlugin([
-      { from: path.join(paths.src, 'fonts'), to: path.join(paths.build, 'fonts') },
-      { from: path.join(paths.src, 'images'), to: path.join(paths.build, 'images') },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: path.join(paths.src, 'fonts'), to: path.join(paths.build, 'fonts') },
+        { from: path.join(paths.src, 'images'), to: path.join(paths.build, 'images') },
+      ]  
+    }),
     /**
      * MiniCssExtractPlugin
      *
