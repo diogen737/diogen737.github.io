@@ -1,7 +1,13 @@
 @import '~bootstrap-material-design/scss/bootstrap-material-design';
-// @import '~@fortawesome/fontawesome-free/scss/fontawesome';
-// @import '~@fortawesome/fontawesome-free/scss/brands';
-
 @import 'components/components';
 @import 'sections/sections';
   
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: #fff;
+    fill: #fff;
+}

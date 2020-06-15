@@ -59,14 +59,16 @@
     .btn {
         width: 30px;
         background-color: $accent-2;
+
+        &:hover, &:focus {
+            background-color: $accent-1;
+        }
     }
 
     .icon {
-        height: 30px;
-        width: 30px;
-        margin: 13px;
-        fill: white;
+        margin: 25%;
     }
+
 }
 
 
