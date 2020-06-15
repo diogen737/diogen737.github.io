@@ -1,0 +1,79 @@
+.cv-image-container, .cv-landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cv-image-container {
+    background-color: $bg-4;
+
+    .cv-image {
+        width: 10rem;
+        margin: 1.5em 0;
+    }
+}
+
+.cv-landing-container {
+    flex-direction: column;
+    background-color: $bg-3;
+
+    .cv-name {
+        font-size: 3rem;
+        margin: .5rem 0;
+        color: $accent-0;
+        text-shadow: 3px 0 5px rgba(0,0,0,.3),
+                     3px 3px 3px rgba(0,0,0,.5),
+                     3px 6px 1px rgba(0,0,0,.3),
+                     3px 6px 5px rgba(0,0,0,.4),
+                     3px 8px 10px rgba(0,0,0,.35),
+                     3px 13px 10px rgba(0,0,0,.4),
+                     3px 23px 20px rgba(0,0,0,.25);
+
+        span:first-child {
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+
+    .cv-occupation {
+        color: $accent-0;
+        font-size: 1.5em;
+        font-weight: 100;
+        text-shadow: 3px 0 5px rgba(0,0,0,.3),
+                     3px 1px 3px rgba(0,0,0,.5),
+                     3px 4px 1px rgba(0,0,0,.3),
+                     3px 4px 5px rgba(0,0,0,.4);
+        white-space: nowrap;
+    }
+}
+
+.landing-hr {
+    background-image: linear-gradient(to right, $bg-4 5%, white, $bg-4 95%);
+    border: 0;
+    height: 2px;
+    width: 90%;
+}
+
+.cv-social {
+
+    .btn {
+        width: 30px;
+        background-color: $accent-2;
+    }
+
+    .icon {
+        height: 30px;
+        width: 30px;
+        margin: 13px;
+        fill: white;
+    }
+}
+
+
+
+@media (min-width: $screen-md) {
+    .cv-image-container .cv-image {
+		max-width: 20rem;
+		width: 90%;
+	}
+}

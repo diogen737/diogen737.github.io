@@ -1,0 +1,16 @@
+.progress-container-scroll {
+	background-color: $accent-2;
+	height: 0.4em;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+  z-index: 5;
+  
+  & > div {
+    background-color: $primary;
+    height: 100%;
+    width: 0;
+    max-width: 100%;
+  }
+}

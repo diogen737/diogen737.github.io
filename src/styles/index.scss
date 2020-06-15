@@ -1,20 +1,7 @@
-@import 'variables';
-@import 'normalize';
-@import 'boilerplate';
+@import '~bootstrap-material-design/scss/bootstrap-material-design';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+// @import '~@fortawesome/fontawesome-free/scss/brands';
 
-.progress-container-scroll {
-	background-color: $color-accent-2;
-	height: 0.4em;
-	margin: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-  z-index: 5;
+@import 'components/components';
+@import 'sections/sections';
   
-  & > div {
-    background-color: $color-primary;
-    height: 100%;
-    width: 0;
-    max-width: 100%;
-  }
-}

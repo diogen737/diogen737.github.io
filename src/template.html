@@ -16,6 +16,122 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
+  <style>
+    /*
+    * Fonts setup
+    *
+    * TODO: remove unused
+    */
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 100;
+      src: local('Roboto Thin'), local('Roboto-Thin'),
+           url('/fonts/roboto-v20-latin-100.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-100.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: italic;
+      font-weight: 100;
+      src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'),
+           url('/fonts/roboto-v20-latin-100italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-100italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 300;
+      src: local('Roboto Light'), local('Roboto-Light'),
+           url('/fonts/roboto-v20-latin-300.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-300.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto'), local('Roboto-Regular'),
+           url('/fonts/roboto-v20-latin-regular.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-regular.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: italic;
+      font-weight: 300;
+      src: local('Roboto Light Italic'), local('Roboto-LightItalic'),
+           url('/fonts/roboto-v20-latin-300italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-300italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: italic;
+      font-weight: 400;
+      src: local('Roboto Italic'), local('Roboto-Italic'),
+           url('/fonts/roboto-v20-latin-italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: italic;
+      font-weight: 500;
+      src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'),
+           url('/fonts/roboto-v20-latin-500italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-500italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'), local('Roboto-Medium'),
+           url('/fonts/roboto-v20-latin-500.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-500.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 700;
+      src: local('Roboto Bold'), local('Roboto-Bold'),
+           url('/fonts/roboto-v20-latin-700.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-700.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: normal;
+      font-weight: 900;
+      src: local('Roboto Black'), local('Roboto-Black'),
+           url('/fonts/roboto-v20-latin-900.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-900.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: italic;
+      font-weight: 700;
+      src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'),
+           url('/fonts/roboto-v20-latin-700italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-700italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-display: swap;
+      font-style: italic;
+      font-weight: 900;
+      src: local('Roboto Black Italic'), local('Roboto-BlackItalic'),
+           url('/fonts/roboto-v20-latin-900italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
+           url('/fonts/roboto-v20-latin-900italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+  </style>
+
 </head>
 
 <body>
@@ -28,6 +144,91 @@
     <div id="scroll-bar"></div>
   </div>
 
+  <main>
+
+  <!-- <div class="container-fluid"> -->
+
+    <!-- <div class="row vh-100"> -->
+
+      <!-- TODO: RESPONSIVE IMAGE -->
+
+      <!-- <div class="col-md-3 col-xl-2 cv-image-container"> -->
+        <!-- <img src="/images/profile.png" class="cv-image" alt="Profile image"> -->
+      <!-- </div> -->
+<!--  -->
+      <!-- <div class="col-md-9 col-xl-10 cv-landing-container"> -->
+<!--  -->
+        <!-- <div class="cv-name"> -->
+          <!-- <span>Oleg</span> -->
+          <!-- <span>Musienko</span> -->
+        <!-- </div> -->
+        <!-- <span class="cv-occupation">Frontend Web Developer</span> -->
+
+        <!-- <hr class="landing-hr"> -->
+
+        <!-- #########  SOCIAL BUTTONS ROW  ############### -->
+
+        <!-- <div class="cv-social"> -->
+          <!-- mb-4 mt-2 -->
+          <!-- <a mat-mini-fab matTooltip="Google+ profile" matTooltipPosition="below" class="mr-2 bgh-google"
+            href="https://plus.google.com/u/0/103162016467041519583" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-google"></i>
+          </a> -->
+          <!-- <a mat-mini-fab matTooltip="Facebook profile" matTooltipPosition="below" class="mx-2 bgh-facebook"
+            href="https://www.facebook.com/profile.php?id=100002269476223" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-facebook"></i>
+          </a> -->
+          <!-- matTooltip="VK profile" -->
+          <!-- matTooltipPosition="below" -->
+          <!-- class="mx-2 bgh-vk" -->
+          <!-- <a href="https://vk.com/diogen737" class="btn bmd-btn-fab" target="_blank" rel="noopener noreferrer"> -->
+            <!-- <svg class="icon"> -->
+              <!-- <use xlink:href="/fonts/fa-icons.svg#linkedin"></use> -->
+            <!-- </svg> -->
+          <!-- </a> -->
+          <!-- <a mat-mini-fab matTooltip="LinkedIn profile" matTooltipPosition="below" class="mx-2 bgh-linkedin" -->
+            <!-- href="https://www.linkedin.com/in/oleg-musienko-144687159/" target="_blank" rel="noopener noreferrer"> -->
+            <!-- <i class="fa fa-linkedin"></i> -->
+          <!-- </a> -->
+          <!-- <a mat-mini-fab matTooltip="GitHub profile" matTooltipPosition="below" class="ml-2 bgh-github" -->
+            <!-- href="https://github.com/diogen737" target="_blank" rel="noopener noreferrer"> -->
+          <!-- </a> -->
+        <!-- </div> -->
+
+        <!-- #########  LOCATION & CONTACTS  ############### -->
+
+        <!-- <div class="contacts-grid d-flex flex-wrap flex-md-nowrap justify-content-between w-100"> -->
+          <!-- <div class="contacts-block d-flex flex-column justify-content-center w-50 my-1"> -->
+            <!-- <span class="text-center contacts-item">Location</span> -->
+            <!-- <a mat-button class="clr-accent1 contacts-item" -->
+              <!-- href="https://www.google.ru/maps/@55.7560988,37.6011389,11.59z?hl=en" target="_blank" -->
+              <!-- rel="noopener noreferrer"> -->
+              <!-- Moscow, Russia <i class="fa fa-location-arrow"></i> -->
+            <!-- </a> -->
+          <!-- </div> -->
+          <!-- <div class="contacts-block d-flex flex-column justify-content-center w-50 my-1"> -->
+            <!-- <span class="text-center contacts-item">Working at</span> -->
+            <!-- <a mat-button class="clr-accent1 contacts-item" href="https://goo.gl/maps/bGSPKsSpJkK2" target="_blank" -->
+              <!-- rel="noopener noreferrer"> -->
+              <!-- Domodedovo Airport <i class="fa fa-location-arrow"></i> -->
+            <!-- </a> -->
+          <!-- </div> -->
+          <!-- <div class="contacts-block d-flex flex-column justify-content-center w-100 my-1"> -->
+            <!-- <span class="text-center contacts-item">E-mail</span> -->
+            <!-- <a mat-button class="clr-accent1 contacts-item" href="mailto:Diogen737@gmail.com"> -->
+              <!-- Diogen737@gmail.com <i class="fa fa-envelope"></i> -->
+            <!-- </a> -->
+          <!-- </div> -->
+        <!-- </div> -->
+<!--  -->
+      <!-- </div> -->
+<!--  -->
+    <!-- </div> -->
+<!--  -->
+  <!-- </div> -->
+<!-- </main> -->
+
+  <!-- <p>Hello world! This is HTML5 Boilerplate.</p>
   <p>Hello world! This is HTML5 Boilerplate.</p>
   <p>Hello world! This is HTML5 Boilerplate.</p>
   <p>Hello world! This is HTML5 Boilerplate.</p>
@@ -147,8 +348,7 @@
   <p>Hello world! This is HTML5 Boilerplate.</p>
   <p>Hello world! This is HTML5 Boilerplate.</p>
   <p>Hello world! This is HTML5 Boilerplate.</p>
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <p>Hello world! This is HTML5 Boilerplate.</p> -->
 
 
 </body>
