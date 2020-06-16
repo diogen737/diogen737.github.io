@@ -8,24 +8,27 @@
  */
 
 /* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+  Base styles: opinionated defaults
+========================================================================== */
 
 html {
-  color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
 
+body {
+  color: #fff;
+}
+
 /*
-   * Remove text-shadow in selection highlight:
-   * https://twitter.com/miketaylr/status/12228805301
-   *
-   * Vendor-prefixed and regular ::selection selectors cannot be combined:
-   * https://stackoverflow.com/a/16982510/7133471
-   *
-   * Customize the background color to match your design.
-   */
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -38,8 +41,8 @@ html {
 }
 
 /*
-   * A better looking default horizontal rule
-   */
+ * A better looking default horizontal rule
+ */
 
 hr {
   display: block;
@@ -50,11 +53,12 @@ hr {
   padding: 0;
 }
 
-/*
+/* ==========================================================================
    * Remove the gap between audio, canvas, iframes,
    * images, videos and the bottom of their containers:
    * https://github.com/h5bp/html5-boilerplate/issues/440
-   */
+========================================================================== */
+
 
 audio,
 canvas,
@@ -66,8 +70,8 @@ video {
 }
 
 /*
-   * Remove default fieldset styles.
-   */
+ * Remove default fieldset styles.
+ */
 
 fieldset {
   border: 0;
@@ -76,32 +80,18 @@ fieldset {
 }
 
 /*
-   * Allow only vertical resizing of textareas.
-   */
+ * Allow only vertical resizing of textareas.
+ */
 
 textarea {
   resize: vertical;
 }
 
 /* ==========================================================================
-     EXAMPLE Media Queries for Responsive Design.
-     These examples override the primary ('mobile first') styles.
-     Modify as content requires.
-     ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-     Print styles.
-     Inlined to avoid the additional HTTP request:
-     https://www.phpied.com/delay-loading-your-print-css/
-     ========================================================================== */
+  Print styles.
+  Inlined to avoid the additional HTTP request:
+  https://www.phpied.com/delay-loading-your-print-css/
+========================================================================== */
 
 @media print {
   *,
@@ -128,9 +118,9 @@ textarea {
   }
 
   /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
   a[href^="#"]::after,
   a[href^="javascript:"]::after {
     content: "";
@@ -147,9 +137,9 @@ textarea {
   }
 
   /*
-     * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
   thead {
     display: table-header-group;
   }
@@ -171,3 +161,26 @@ textarea {
     page-break-after: avoid;
   }
 }
+
+/* ==========================================================================
+  Custom global styles
+========================================================================== */
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: #fff;
+  fill: #fff;
+}
+
+a {
+  color: $accent-1;
+
+  &:hover, &:focus {
+    color: $accent-0;
+    text-decoration: none;
+  }
+}
+    
