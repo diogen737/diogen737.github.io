@@ -183,4 +183,17 @@ a {
     text-decoration: none;
   }
 }
-    
+
+.vh-25 {
+  height: 25vh;
+}
+
+.vh-75 {
+  height: 75vh;
+}
+
+@media (min-width: $screen-md) {
+  .vh-md-100 {
+    height: 100vh;
+  }
+}
