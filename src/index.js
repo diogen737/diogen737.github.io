@@ -1,4 +1,4 @@
-import './styles/index.scss'
+import './styles/index.scss';
 
 const scrollBar = document.getElementById('scroll-bar');
 
