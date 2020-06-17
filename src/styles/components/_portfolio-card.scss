@@ -1,0 +1,32 @@
+.portfolio-card {
+    max-width: 320px;
+
+    .card-link:hover {
+        img {
+            transform: scale(1.1);
+        }
+    }
+
+    .card-img {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            height: auto;
+            background-color: $accent-0;
+            border-radius: 5px;
+            max-width: 100%;
+            transition: transform .3s ease-in;
+        }
+    }
+
+    .card-name {
+        margin-top: .5rem;
+        font-weight: 500;
+    }
+
+    .card-description {
+        font-size: .85rem;
+        color: $accent-1;
+    }
+}

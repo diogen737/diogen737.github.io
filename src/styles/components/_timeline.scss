@@ -33,7 +33,6 @@
     }
 
     .position {
-        
         display: flex;
         flex-direction: column;
         @extend .col-md-5, .col-xl-3;
@@ -44,7 +43,7 @@
         }
         
         .period {
-            font-size: 0.8em;
+            font-size: 0.85em;
             line-height: 1.3rem;
         }
     }
