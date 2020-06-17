@@ -19,7 +19,8 @@
             width: 100%;
     
             .exp-name {
-                display: block;
+                display: flex;
+                justify-content: space-between;
                 padding: .4rem 0 .75rem;
                 font-weight: 600;
                 color: $primary;
