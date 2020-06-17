@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    background-color: $bg-1;
+    color: $accent-1;
+
+    .footer-item {
+        padding: .75rem;
+        text-align: center;
+    }
+}
+
+@media (min-width: $screen-md) {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 2.5rem;
+    }
+}
