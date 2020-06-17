@@ -1,0 +1,69 @@
+.cv-block.pt-0 > .job-item {
+    &:first-child {
+        padding-top: 1rem;
+    }
+    &:last-child:after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 14px;
+        left: -8px;
+        bottom: 0;
+        background-color: $accent-2;
+    }
+}
+
+.job-item {
+    position: relative;
+    padding: 0 0 2rem 1.5em;
+    margin-left: 1rem;
+    border-left: 2px solid $accent-2;
+    text-align: left;
+    color: $accent-1;
+    
+    .dot {
+        position: absolute;
+        left: -7px;
+        width: 12px;
+        height: 12px;
+        margin-top: 10px;
+
+        border-radius: 50%;
+        background-color: $primary;
+    }
+
+    .position {
+        
+        display: flex;
+        flex-direction: column;
+        @extend .col-md-5, .col-xl-3;
+
+        .name {
+            font-size: 1.2em;
+            font-weight: 800;
+        }
+        
+        .period {
+            font-size: 0.8em;
+            line-height: 1.3rem;
+        }
+    }
+
+    .description {
+        @extend .col, ,.pt-3, .pt-md-0;
+
+        ul {
+            list-style-type: circle;
+        }
+    }
+}
+
+@media (min-width: $screen-md) {
+    .cv-block.pt-0 > .job-item:first-child {
+        padding-top: 2rem;
+    }
+
+    .job-item {
+        padding-left: 2.5rem;
+    }
+}

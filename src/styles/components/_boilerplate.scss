@@ -192,6 +192,14 @@ a {
   height: 75vh;
 }
 
+.bxs-1 {
+  box-shadow: 0 0 0 10px $bg-1;
+}
+
+.bxs-3 {
+  box-shadow: 0 0 0 10px $bg-3;
+}
+
 @media (min-width: $screen-md) {
   .vh-md-100 {
     height: 100vh;
