@@ -1,5 +1,14 @@
 import '../styles/index.scss';
 
+setTimeout(() => {
+    document.getElementById('ld-container').remove();
+    document.getElementById('main').classList.remove('d-none');
+}, 1000);
+
+setTimeout(() => {
+    document.getElementById('main').classList.remove('transparent');
+}, 1200);
+
 const scrollBar = document.getElementById('scroll-bar');
 const githubLink = document.getElementById('github-link');
 document.addEventListener('scroll', () => {
