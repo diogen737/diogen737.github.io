@@ -1,0 +1,47 @@
+.cv-block {
+    .col-md-6:first-child > .exp:first-child {
+        padding-top: 0;
+    }
+    
+    .exp {
+        display: flex;
+        text-align: left;
+        padding-top: 1.5rem;
+    
+        .exp-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $primary;
+        }
+    
+        .exp-box {
+            padding: 0 1.5rem;
+            width: 100%;
+    
+            .exp-name {
+                display: flex;
+                justify-content: space-between;
+                padding: .4rem 0 .75rem;
+                font-weight: 700;
+                color: $primary;
+            }
+            .progress-container {
+                height: .4rem;
+                width: 100%;
+                background-color: $accent-2;
+                margin-top: .25rem;
+
+                .progress {
+                    height: 100%;
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-md) {
+    .cv-block .col-md-6:nth-child(2) > .exp:first-child {
+        padding-top: 0;
+    }
+}

@@ -16,35 +16,8 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
-  <!-- TODO: Dont forget to download bundled SVG icons after all icons are picked -->
-  <!-- https://icomoon.io/app/#/select/image -->
-  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/e00c8c3681/UntitledProject/style-svg.css">
-  <script defer src="https://i.icomoon.io/public/temp/e00c8c3681/UntitledProject/svgxuse.js"></script>
-
   <style>
-    /*
-    * Fonts setup
-    *
-    * TODO: remove unused
-    */
-    @font-face {
-      font-family: 'Roboto';
-      font-display: swap;
-      font-style: normal;
-      font-weight: 100;
-      src: local('Roboto Thin'), local('Roboto-Thin'),
-           url('/fonts/roboto-100.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
-           url('/fonts/roboto-100.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    @font-face {
-      font-family: 'Roboto';
-      font-display: swap;
-      font-style: italic;
-      font-weight: 100;
-      src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'),
-           url('/fonts/roboto-100italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
-           url('/fonts/roboto-100italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
+    /* Fonts setup */
     @font-face {
       font-family: 'Roboto';
       font-display: swap;
@@ -66,74 +39,63 @@
     @font-face {
       font-family: 'Roboto';
       font-display: swap;
-      font-style: italic;
-      font-weight: 300;
-      src: local('Roboto Light Italic'), local('Roboto-LightItalic'),
-           url('/fonts/roboto-300italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
-           url('/fonts/roboto-300italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    @font-face {
-      font-family: 'Roboto';
-      font-display: swap;
-      font-style: italic;
-      font-weight: 400;
-      src: local('Roboto Italic'), local('Roboto-Italic'),
-           url('/fonts/roboto-italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
-           url('/fonts/roboto-italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    @font-face {
-      font-family: 'Roboto';
-      font-display: swap;
-      font-style: italic;
-      font-weight: 500;
-      src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'),
-           url('/fonts/roboto-500italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
-           url('/fonts/roboto-500italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    @font-face {
-      font-family: 'Roboto';
-      font-display: swap;
-      font-style: normal;
-      font-weight: 500;
-      src: local('Roboto Medium'), local('Roboto-Medium'),
-           url('/fonts/roboto-500.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
-           url('/fonts/roboto-500.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    @font-face {
-      font-family: 'Roboto';
-      font-display: swap;
       font-style: normal;
       font-weight: 700;
       src: local('Roboto Bold'), local('Roboto-Bold'),
            url('/fonts/roboto-700.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
            url('/fonts/roboto-700.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
-    @font-face {
-      font-family: 'Roboto';
-      font-display: swap;
-      font-style: normal;
-      font-weight: 900;
-      src: local('Roboto Black'), local('Roboto-Black'),
-           url('/fonts/roboto-900.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
-           url('/fonts/roboto-900.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    /* Loader setup */
+    body {
+      background-color: #343434 !important;
     }
-    @font-face {
-      font-family: 'Roboto';
-      font-display: swap;
-      font-style: italic;
-      font-weight: 700;
-      src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'),
-           url('/fonts/roboto-700italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
-           url('/fonts/roboto-700italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    .main {
+      transition: all .3s ease-in;
     }
-    @font-face {
-      font-family: 'Roboto';
-      font-display: swap;
-      font-style: italic;
-      font-weight: 900;
-      src: local('Roboto Black Italic'), local('Roboto-BlackItalic'),
-           url('/fonts/roboto-900italic.woff2') format('woff2'),  /* Chrome 26+, Opera 23+, Firefox 39+ */
-           url('/fonts/roboto-900italic.woff') format('woff');    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    .transparent {
+      opacity: 0;
+    }
+    .ld-container {
+      height: 35px;
+      left: calc(50% - 35px);
+      overflow: hidden;
+      position: absolute;
+      top: calc(50% - 17px);
+      width: 70px;
+      z-index: 5001;
+    }
+    .ld-loader {
+      animation: ld-rotate 3s ease-in-out infinite;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-radius: 50%;
+      border-right-color: #FFF;
+      border-style: solid;
+      border-top-color: #FFF;
+      box-sizing: border-box;
+      height: 70px;
+      transform: rotate(-200deg);
+      width: 70px;
+    }
+    .ld-wrapper {
+      background-color: rgba(0, 0, 0, 0.8);
+      height: 110%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 5000;
+    }
+
+    @keyframes ld-rotate {
+      0% { border-width: 10px; }
+      25% { border-width: 3px; }
+      50% { 
+        transform: rotate(115deg); 
+        border-width: 10px;
+      }
+      75% { border-width: 3px;}
+      100% { border-width: 10px;}
     }
   </style>
 
@@ -144,6 +106,12 @@
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
+  
+  <div class="ld-container" id="ld-container">
+    <div class="ld-loader"></div>
+  </div>
+
+  <div class="main d-none transparent" id="main">
 
   <div class="progress-container-scroll">
     <div id="scroll-bar"></div>
@@ -166,6 +134,13 @@
 
       <div class="cv-block cv-landing-container vh-75 vh-md-100">
 
+        <div class="repository-link">
+          <a class="btn btn-outline-light" id="github-link" href="https://github.com/diogen737/diogen737.github.io">
+            <svg class="icon"><use xlink:href="icon-defs.svg#icon-github"></use></svg>
+            <span class="text">View project on GitHub</span>
+          </a>
+        </div>
+
         <div class="cv-name">
           <span>Oleg</span>
           <span>Musienko</span>
@@ -179,25 +154,25 @@
           <a class="btn bmd-btn-fab mr-3 mr-md-4 btn-linkedin"
              target="_blank" rel="noopener noreferrer"
              href="https://www.linkedin.com/in/oleg-musienko-144687159/">
-            <svg class="icon light"><use xlink:href="#icon-linkedin2"></use></svg>
+            <svg class="icon light"><use xlink:href="icon-defs.svg#icon-linkedin2"></use></svg>
           </a>
 
           <a class="btn bmd-btn-fab mr-3 mr-md-4 btn-xing"
              target="_blank" rel="noopener noreferrer"
              href="https://www.xing.com/profile/Oleg_Musienko/cv">
-            <svg class="icon light"><use xlink:href="#icon-xing2"></use></svg>
+            <svg class="icon light"><use xlink:href="icon-defs.svg#icon-xing2"></use></svg>
           </a>
 
           <a class="btn bmd-btn-fab mr-md-4 btn-github"
              target="_blank" rel="noopener noreferrer"
              href="https://github.com/diogen737">
-            <svg class="icon light"><use xlink:href="#icon-github"></use></svg>
+            <svg class="icon light"><use xlink:href="icon-defs.svg#icon-github"></use></svg>
           </a>
 
           <a class="btn bmd-btn-fab mr-3 btn-vk"
              target="_blank" rel="noopener noreferrer"
              href="https://vk.com/diogen737">
-            <svg class="icon light"><use xlink:href="#icon-vk1"></use></svg>
+            <svg class="icon light"><use xlink:href="icon-defs.svg#icon-vk1"></use></svg>
           </a>
 
         </div>
@@ -209,7 +184,7 @@
             <a class=""
               href="https://www.google.ru/maps/@55.7560988,37.6011389,11.59z?hl=en" target="_blank"rel="noopener noreferrer">
               <span>Moscow, Russia</span>
-              <svg class="icon icon-location"><use xlink:href="#icon-location"></use></svg>
+              <svg class="icon icon-location"><use xlink:href="icon-defs.svg#icon-location"></use></svg>
             </a>
           </div>
 
@@ -218,7 +193,7 @@
             <a class=""
               href="https://www.infopunks.com/" target="_blank"rel="noopener noreferrer">
               <span>InfoPunks GmbH</span>
-              <svg class="icon icon-new-tab"><use xlink:href="#icon-new-tab"></use></svg>
+              <svg class="icon icon-new-tab"><use xlink:href="icon-defs.svg#icon-new-tab"></use></svg>
             </a>
           </div>
 
@@ -227,7 +202,7 @@
             <a class=""
               href="mailto:Diogen737@gmail.com" target="_blank"rel="noopener noreferrer">
               <span>Diogen737@gmail.com</span>
-              <svg class="icon icon-envelop"><use xlink:href="#icon-envelop"></use></svg>
+              <svg class="icon icon-envelop"><use xlink:href="icon-defs.svg#icon-envelop"></use></svg>
             </a>
           </div>
 
@@ -255,7 +230,7 @@
       </div>
 
       <!-- ###################################### -->
-      <!-- #########  CV SUMMARY  ############### -->
+      <!-- ##########  EXPERTISE  ############### -->
       <!-- ###################################### -->
 
       <div class="cv-block">
@@ -277,9 +252,7 @@
                 </span>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-6">
             <div class="exp">
               <div class="exp-number">02</div>
               <div class="exp-box">
@@ -308,9 +281,287 @@
         </div>
       </div>
 
+      <!-- ###################################### -->
+      <!-- ############  SKILLS  ################ -->
+      <!-- ###################################### -->
+
+      <div class="cv-block">
+        <span class="block-name">SKILLS</span>
+        <span class="block-description">Languages, technologies</span>
+      </div>
+
+      <div class="cv-block">
+        <div class="row">
+          <div class="col-md-6">
+
+            <div class="exp">
+              <div class="exp-number">01</div>
+              <div class="exp-box">
+                <div class="exp-name">
+                  <span>JAVASCRIPT</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp">
+              <div class="exp-number">02</div>
+              <div class="exp-box">
+                <div class="exp-name">
+                  <span>ANGULAR + TYPESCRIPT</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp">
+              <div class="exp-number">03</div>
+              <div class="exp-box">
+                <div class="exp-name">
+                  <span>HTML + CSS</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+
+            <div class="exp">
+              <div class="exp-number">04</div>
+              <div class="exp-box">
+                <div class="exp-name">
+                  <span>GIT</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp">
+              <div class="exp-number">05</div>
+              <div class="exp-box">
+                <div class="exp-name">
+                  <span>BASH</span>
+                  <span>65%</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp">
+              <div class="exp-number">06</div>
+              <div class="exp-box">
+                <div class="exp-name">
+                  <span>SQL</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ###################################### -->
+      <!-- #########  JOBS TIMELINE  ############ -->
+      <!-- ###################################### -->
+
+      <div class="cv-block">
+        <div class="block-name">EXPERIENCE</div>
+        <div class="block-description">Jobs timeline</div>
+      </div>
+
+      <div class="cv-block pb-0">
+
+        <div class="job-item">
+          <div class="dot bxs-3"></div>
+          <div class="row">
+            <div class="position">
+              <span class="period">March 2019 - Today</span>
+              <span class="name">Angular Frontend developer</span>
+              <span class="company">Infopunks GmbH</span>
+            </div>
+            <div class="description">
+              <ul>
+                <li>Designing integration workflows for enterprise systems used in the company (IBM Lotus Notes, AODB, RMS)</li>
+                <li>Developing and maintaining data migration processes with Tibco ActiveMatrix BusinessWorks (~200 Informational systems in Lotus with 2 to 20 processes per system)</li>
+                <li>Writing highly optimized SQL queries to Oracle & MS SQL Server databases, XPath queries, XSD schemas & custom Tibco functions in Java</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="job-item">
+          <div class="dot bxs-3"></div>
+          <div class="row">
+            <div class="position">
+              <span class="period">April 2018 - March 2019</span>
+              <span class="name">Integration flows developer</span>
+              <span class="company">Domodedovo Integration</span>
+            </div>
+            <div class="description">
+              <ul>
+                <li>Designing integration workflows for enterprise systems used in the company (IBM Lotus Notes, AODB, RMS)</li>
+                <li>Developing and maintaining data migration processes with Tibco ActiveMatrix BusinessWorks (~200 Informational systems in Lotus with 2 to 20 processes per system)</li>
+                <li>Writing highly optimized SQL queries to Oracle & MS SQL Server databases, XPath queries, XSD schemas & custom Tibco functions in Java</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="job-item">
+          <div class="dot bxs-3"></div>
+          <div class="row">
+            <div class="position">
+              <span class="period">April 2017 - March 2018</span>
+              <span class="name">BI Reporting developer</span>
+              <span class="company">Domodedovo Integration</span>
+            </div>
+            <div class="description">
+              <ul>
+                <li>Writing highly optimized SQL queries to MS SQL Server databases</li>
+                <li>Composing data to complex BI reports with Microstrategy Desktop</li>
+                <li>Setting up data migration form IBM Lotus Notes enterprise Informational systems to RDBMS with custom XMLFactory tool (XML, XSLT)</li>
+                <li>Developing & maintainnig complex SQL stored procedures with business logic for automatic violations detection in the company's document management system</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ###################################### -->
+      <!-- #######  EDUCATION TIMELINE  ######### -->
+      <!-- ###################################### -->
+
+      <div class="cv-block">
+        <div class="block-name">EDUCATION</div>
+        <div class="block-description">Where it all began</div>
+      </div>
+
+      <div class="cv-block pt-0">
+
+        <div class="job-item">
+          <div class="dot bxs-1"></div>
+          <div class="row">
+            <div class="position">
+              <span class="period">2012 - 2016</span>
+              <span class="name">Bachelor's degree</span>
+              <span class="company">NRNU MEPhI</span>
+            </div>
+            <div class="description">
+              <ul>
+                <li>Institute of Cyber Intelligence Systems - Computer Science & Engineering specialization</li>
+                <li>Honours degee</li>
+                <li>Diploma thesis - Designing and implementation of parallel algorithm of finding prime numbers on a given interval for hybrid computer systems</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ###################################### -->
+      <!-- ############  PROJECTS  ############## -->
+      <!-- ###################################### -->
+
+      <div class="cv-block">
+        <div class="block-name">WORKS</div>
+        <div class="block-description">Projects I've been working on</div>
+      </div>
+
+      <div class="cv-block">
+        <div class="row">
+
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="portfolio-card">
+              <a class="card-link" target="_blank" rel="noopener noreferrer" href="https://de.extraetf.com">
+                <div class="card-img">
+                  <picture>
+                    <source type="image/webp" srcset="/images/extraetf-logo.webp">
+                    <source type="image/jpeg" srcset="/images/extraetf-logo.jpg">
+                    <img src="/images/extraetf-logo.jpg" alt="" width="320" height="180">
+                  </picture>
+                </div>
+                <h5 class="card-name">extraETF</h5>
+              </a>
+              <div class="card-description">Leading investing tools and info provider on Exchange Traded Funds (ETFs) in Germany</div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="portfolio-card">
+              <a class="card-link" target="_blank" rel="noopener noreferrer" href="https://ng-yard.firebaseapp.com/auth">
+                <div class="card-img">
+                  <picture>
+                    <source type="image/webp" srcset="/images/playground-logo.webp">
+                    <source type="image/png" srcset="/images/playground-logo.png">
+                    <img src="/images/playground-logo.png" alt="" width="320" height="180">
+                  </picture>
+                </div>
+                <h5 class="card-name">NgYard</h5>
+              </a>
+              <div class="card-description">My Angular demo project</div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="portfolio-card">
+              <a class="card-link" target="_blank" rel="noopener noreferrer" href="https://bemaster.market/">
+                <div class="card-img">
+                  <picture>
+                    <source type="image/webp" srcset="/images/bm-logo.webp">
+                    <source type="image/png" srcset="/images/bm-logo.png">
+                    <img src="/images/bm-logo.png" alt="" width="320" height="180">
+                  </picture>
+                </div>
+                <h5 class="card-name">Be Master</h5>
+              </a>
+              <div class="card-description">Handmade goods marketplace and blogging platform</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
   </main>
+
+  <footer>
+
+    <div class="footer-item">
+      <span>©</span>
+      <span id="footer-year"></span>
+      <span>Oleg Musienko</span>
+    </div>
+
+    <div class="footer-item">
+      <span>Hosted by&nbsp;</span>
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/diogen737/diogen737.github.io/deployments">
+        <img src="/images/github-pages-logo.svg" alt="">
+      </a>
+    </div>
+
+  </footer>
+  </div>
 
 </body>
 </html>

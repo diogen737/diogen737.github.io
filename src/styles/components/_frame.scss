@@ -1,0 +1,67 @@
+.cv-block {
+    padding: 1rem;
+
+    &:nth-child(4n+1) {
+        background-color: $bg-4;
+        @extend .col-md-3, .col-xl-2;
+    }
+    &:nth-child(4n+2) {
+        background-color: $bg-3;
+        @extend .col-md-9, .col-xl-10;
+    }
+    &:nth-child(4n+3) {
+        background-color: $bg-2;
+        @extend .col-md-3, .col-xl-2;
+    }
+    &:nth-child(4n+4) {
+        background-color: $bg-1;
+        @extend .col-md-9, .col-xl-10;
+    }
+
+    // Top(mobile) / left(desktop) block (name + description)
+    &:nth-child(2n+3) {
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+
+        .block-name {
+            color: $primary;
+            font-weight: 700;
+            @extend .text-center, .text-md-right;
+        }
+        .block-description {
+            color: $accent-1;
+            font-size: 0.9em;
+            @extend .text-center, .text-md-right;
+        }
+    }
+
+    // Bottom(mobile) / right(desktop) block (content)
+    &:nth-child(2n+4) {
+        font-size: 0.875rem;
+        color: $accent-0;
+        z-index: 10;
+
+        @extend .text-center, .text-md-left;
+    }
+}
+
+@media (min-width: $screen-md) {
+    .cv-block {
+        // Top(mobile) / left(desktop) block (name + description)
+        &:nth-child(2n+3) {
+            padding: 2rem 2rem 0 0;
+        }
+
+        // Bottom(mobile) / right(desktop) block (content)
+        &:nth-child(2n+4) {
+            padding: 2rem 3rem;
+            font-size: 1rem;
+        }
+    }
+
+    .cv-image-container .cv-image {
+		max-width: 20rem;
+		width: 90%;
+	}
+}
