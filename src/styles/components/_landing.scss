@@ -10,7 +10,43 @@
 }
 
 .cv-landing-container {
+    position: relative;
     flex-direction: column;
+
+    .repository-link {
+        position: fixed;
+        top: 25%;
+        right: 0;
+        z-index: 5;
+
+        a {
+            $text-width: 200px;
+
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            transition: all .3s ease-in;
+            padding-right: $text-width;
+
+            .icon {
+                vertical-align: text-top;
+            }
+            .text {
+                position: absolute;
+                margin-left: 5px;
+                width: $text-width;
+                transition: opacity .3s ease-in;
+            }
+
+            &.collapsed {
+                padding-right: 1rem;
+
+                .text {
+                    opacity: 0;
+                }
+            }
+        }
+    }
 
     .cv-name {
         font-size: 3rem;
@@ -111,7 +147,11 @@
     .cv-image-container .cv-image {
 		max-width: 20rem;
 		width: 90%;
-	}
+    }
+    .cv-landing-container .repository-link {
+        top: 75px;
+        right: 75px;
+    }
 }
 
 @media (min-width: $screen-lg) {
