@@ -15,31 +15,33 @@
 
     .repository-link {
         position: fixed;
-        top: 25%;
+        top: 20px;
         right: 0;
         z-index: 5;
 
         a {
-            $text-width: 200px;
-
-            display: inline-block;
+            display: inline-flex;
+            flex-direction: column;
             position: relative;
             overflow: hidden;
             transition: all .3s ease-in;
-            padding-right: $text-width;
+            padding-bottom: $repository-link-size-mobile;
 
             .icon {
                 vertical-align: text-top;
             }
             .text {
                 position: absolute;
-                margin-left: 5px;
-                width: $text-width;
+                height: $repository-link-size-mobile;
+                text-align: right;
+                text-orientation: upright;
+                writing-mode: vertical-rl;
+                font-size: .7rem;
                 transition: opacity .3s ease-in;
             }
 
             &.collapsed {
-                padding-right: 1rem;
+                padding-bottom: .5rem;
 
                 .text {
                     opacity: 0;
@@ -149,8 +151,24 @@
 		width: 90%;
     }
     .cv-landing-container .repository-link {
-        top: 75px;
-        right: 75px;
+        top: 50px;
+        right: 50px;
+
+        a {
+            padding-bottom: .5rem;
+            padding-right: $repository-link-size;
+    
+            .text {
+                height: inherit;
+                width: $repository-link-size;
+                text-orientation: inherit;
+                writing-mode: inherit;
+            }
+
+            &.collapsed {
+                padding-right: 1rem;
+            }
+        }
     }
 }
 

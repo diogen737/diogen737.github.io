@@ -23,7 +23,7 @@ document.addEventListener('scroll', () => {
      * Collapse GitHub button while scrolling
      */
     window.scrollY ? githubLink.classList.add('collapsed') : githubLink.classList.remove('collapsed');
-});
+}, { passive: true });
 
 const footerYear = document.getElementById('footer-year');
 footerYear.innerHTML = new Date().getFullYear();
