@@ -1,10 +1,12 @@
 const paths = require('./paths');
 const common = require('./webpack.common.js');
 
+const glob = require('glob');
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -27,6 +29,9 @@ module.exports = merge(common, {
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css',
     }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${paths.src}/**/*`, { nodir: true })
+    })
   ],
   module: {
     rules: [
