@@ -5,8 +5,9 @@
 }
 
 .cv-image-container .cv-image {
+    display: block;
     width: 10rem;
-    margin: 1.5em 0;
+    margin: 1.5em auto;
 }
 
 .cv-landing-container {

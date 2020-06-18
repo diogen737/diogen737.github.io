@@ -132,10 +132,12 @@
       <!-- #########  LANDING SCREEN  ############### -->
       <!-- ########################################## -->
 
-      <!-- TODO: RESPONSIVE IMAGE -->
-
       <div class="cv-block cv-image-container vh-25 vh-md-100">
-        <img src="/images/profile.png" class="cv-image" alt="Profile image">
+        <picture>
+          <source type="image/webp" srcset="/images/profile.webp">
+          <source type="image/png" srcset="/images/profile.png">
+          <img src="/images/profile.png" class="cv-image" alt="Profile image">
+        </picture>
       </div>
 
       <div class="cv-block cv-landing-container vh-75 vh-md-100">
