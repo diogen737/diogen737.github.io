@@ -1,10 +1,12 @@
 import '../styles/index.scss';
 
+/**
+ * Show loading spinner for a little while
+ */
 setTimeout(() => {
     document.getElementById('ld-container').remove();
     document.getElementById('main').classList.remove('d-none');
 }, 1000);
-
 setTimeout(() => {
     document.getElementById('main').classList.remove('transparent');
 }, 1200);
@@ -25,5 +27,42 @@ document.addEventListener('scroll', () => {
     window.scrollY ? githubLink.classList.add('collapsed') : githubLink.classList.remove('collapsed');
 }, { passive: true });
 
+/**
+ * Inject current year
+ */
 const footerYear = document.getElementById('footer-year');
 footerYear.innerHTML = new Date().getFullYear();
+
+/**
+ * Setup images lazy loading
+ */
+
+ const loadImage = (image, io) => {
+    // Load picture sources
+    const parent = image.parentNode;
+    if (parent.nodeName === 'PICTURE') {
+        const sources = parent.querySelectorAll('source');
+        sources.forEach(s => s.srcset = s.dataset.srcset)
+    }
+
+    // Load img itself
+    image.src = image.dataset.src;
+    image.classList.add('lazy-loaded');
+    image.classList.remove('lazy-loading');
+    io && io.unobserve(image);
+ }
+
+ const lazyImages = document.querySelectorAll('.lazy-loading');
+ const supportsIO = ('IntersectionObserver' in window)
+    && ('IntersectionObserverEntry' in window)
+    && ('isIntersecting' in window.IntersectionObserverEntry.prototype);
+
+if (supportsIO) {
+    const imageObserver = new IntersectionObserver((entries,) => {
+        entries.filter(e => e.isIntersecting)
+            .forEach(e => loadImage(e.target));
+    });
+    lazyImages.forEach(img => imageObserver.observe(img, imageObserver));
+} else {
+    lazyImages.forEach(img => loadImage(img));
+}
