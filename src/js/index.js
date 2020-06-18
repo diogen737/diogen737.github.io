@@ -3,13 +3,15 @@ import '../styles/index.scss';
 /**
  * Show loading spinner for a little while
  */
+const loaderDelay = 800;
+const main = document.getElementById('main');
 setTimeout(() => {
     document.getElementById('ld-container').remove();
-    document.getElementById('main').classList.remove('d-none');
-}, 1000);
+    main.classList.remove('d-none');
+}, loaderDelay);
 setTimeout(() => {
-    document.getElementById('main').classList.remove('transparent');
-}, 1200);
+    main.classList.remove('transparent');
+}, loaderDelay + 200);
 
 const scrollBar = document.getElementById('scroll-bar');
 const githubLink = document.getElementById('github-link');
