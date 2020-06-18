@@ -132,11 +132,12 @@
       <!-- #########  LANDING SCREEN  ############### -->
       <!-- ########################################## -->
 
-
-      <!-- TODO: RESPONSIVE IMAGE -->
-
       <div class="cv-block cv-image-container vh-25 vh-md-100">
-        <img src="/images/profile.png" class="cv-image" alt="Profile image">
+        <picture>
+          <source type="image/webp" srcset="/images/profile.webp">
+          <source type="image/png" srcset="/images/profile.png">
+          <img src="/images/profile.png" class="cv-image" alt="Profile image">
+        </picture>
       </div>
 
       <div class="cv-block cv-landing-container vh-75 vh-md-100">
@@ -502,9 +503,9 @@
               <a class="card-link" target="_blank" rel="noopener noreferrer" href="https://de.extraetf.com">
                 <div class="card-img">
                   <picture>
-                    <source type="image/webp" srcset="/images/extraetf-logo.webp">
-                    <source type="image/jpeg" srcset="/images/extraetf-logo.jpg">
-                    <img src="/images/extraetf-logo.jpg" alt="" width="320" height="180">
+                    <source type="image/webp" data-srcset="/images/extraetf-logo.webp">
+                    <source type="image/jpeg" data-srcset="/images/extraetf-logo.jpg">
+                    <img class="lazy-loading" data-src="/images/extraetf-logo.jpg" alt="extraETF logo" width="320" height="180">
                   </picture>
                 </div>
                 <h5 class="card-name">extraETF</h5>
@@ -518,9 +519,9 @@
               <a class="card-link" target="_blank" rel="noopener noreferrer" href="https://ng-yard.firebaseapp.com/auth">
                 <div class="card-img">
                   <picture>
-                    <source type="image/webp" srcset="/images/playground-logo.webp">
-                    <source type="image/png" srcset="/images/playground-logo.png">
-                    <img src="/images/playground-logo.png" alt="" width="320" height="180">
+                    <source type="image/webp" data-srcset="/images/playground-logo.webp">
+                    <source type="image/png" data-srcset="/images/playground-logo.png">
+                    <img class="lazy-loading" data-src="/images/playground-logo.png" alt="Google + Firebase logo" width="320" height="180">
                   </picture>
                 </div>
                 <h5 class="card-name">NgYard</h5>
@@ -534,9 +535,9 @@
               <a class="card-link" target="_blank" rel="noopener noreferrer" href="https://bemaster.market/">
                 <div class="card-img">
                   <picture>
-                    <source type="image/webp" srcset="/images/bm-logo.webp">
-                    <source type="image/png" srcset="/images/bm-logo.png">
-                    <img src="/images/bm-logo.png" alt="" width="320" height="180">
+                    <source type="image/webp" data-srcset="/images/bm-logo.webp">
+                    <source type="image/png" data-srcset="/images/bm-logo.png">
+                    <img class="lazy-loading" data-src="/images/bm-logo.png" alt="BeMaster logo" width="320" height="180">
                   </picture>
                 </div>
                 <h5 class="card-name">Be Master</h5>
@@ -562,8 +563,8 @@
 
     <div class="footer-item">
       <span>Hosted by&nbsp;</span>
-      <a target="_blank" rel="noopener noreferrer" href="https://github.com/diogen737/diogen737.github.io/deployments">
-        <img src="/images/github-pages-logo.svg" alt="">
+      <a target="_blank" rel="noopener noreferrer" href="https://pages.github.com/">
+        <img class="lazy-loading" data-src="/images/github-pages-logo.svg" alt="Github Pages logo">
       </a>
     </div>
 
