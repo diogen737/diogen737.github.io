@@ -5,7 +5,7 @@ const { merge } = require('webpack-merge');
 const glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 
 module.exports = merge(common, {
@@ -58,7 +58,10 @@ module.exports = merge(common, {
    * Production minimizing of JavaSvript and CSS assets.
    */
   optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    minimizer: [
+      new TerserJSPlugin({}),
+      new CssMinimizerPlugin(),
+    ],
     // Once your build outputs multiple chunks, this option will ensure they share the webpack runtime
     // instead of having their own. This also helps with long-term caching, since the chunks will only
     // change when actual code changes, not the webpack runtime.
