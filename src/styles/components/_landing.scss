@@ -23,14 +23,12 @@
         a {
             display: inline-flex;
             flex-direction: column;
+            align-items: center;
             position: relative;
             overflow: hidden;
             transition: all .3s ease-in;
             padding-bottom: $repository-link-size-mobile;
 
-            .icon {
-                vertical-align: text-top;
-            }
             .text {
                 position: absolute;
                 height: $repository-link-size-mobile;
@@ -85,14 +83,16 @@
         border: 0;
         height: 2px;
         width: 90%;
+        opacity: .75;
     }
 
     .cv-social {
         @extend .pt-4;
 
         .btn {
-            width: 30px;
             background-color: $accent-2;
+            margin: 0 .5rem;
+            border-radius: 50%;
 
             &.btn-github {
                 &:hover, &:focus {
@@ -118,7 +118,8 @@
 
         svg.icon {
             fill: #fff;
-            margin: 25%;
+            font-size: 1.125rem;
+            margin: 6px 0;
         }
     }
 
@@ -158,6 +159,7 @@
         a {
             padding-bottom: .5rem;
             padding-right: $repository-link-size;
+            align-items: flex-start;
     
             .text {
                 height: inherit;
@@ -167,7 +169,7 @@
             }
 
             &.collapsed {
-                padding-right: 1rem;
+                padding-right: .75rem;
             }
         }
     }
