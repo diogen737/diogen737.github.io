@@ -34,7 +34,7 @@
     "gh-pages": "3.2.3",
     "html-webpack-plugin": "5.4.0",
     "mini-css-extract-plugin": "2.4.3",
-    "node-sass": "6.0.1",
+    "node-sass": "7.0.0",
     "postcss-loader": "6.2.0",
     "postcss-preset-env": "6.7.0",
     "purgecss-webpack-plugin": "4.0.3",
