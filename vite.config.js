@@ -4,7 +4,8 @@
 const config = {
     root: 'src/',
     build: {
-        outDir: '../dist/'
+        outDir: '../dist/',
+        emptyOutDir: true,
     }
 }
 

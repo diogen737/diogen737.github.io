@@ -1,8 +1,16 @@
+const purgecss = require('@fullhuman/postcss-purgecss');
+const cssnano = require('cssnano');
+const postcssPresetEnv = require('postcss-preset-env');
+
 module.exports = {
-  plugins: {
-    'postcss-preset-env': {
-      browsers: 'last 2 versions',
-    },
-    cssnano: {},
-  },
+    plugins: [
+        postcssPresetEnv(),
+        purgecss({
+            content: ['./src/**/*.html'],
+            safelist: ['collapsed'],
+        }),
+        cssnano({
+            preset: 'default',
+        }),
+    ]
 }
