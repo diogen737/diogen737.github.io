@@ -1,4 +1,4 @@
-import '../styles/index.scss';
+import '/styles/index.scss';
 
 /**
  * Show loading spinner for a little while

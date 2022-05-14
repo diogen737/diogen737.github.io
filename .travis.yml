@@ -5,7 +5,7 @@ branches:
   only:
   - dev
 script:
-- npm run build
+- yarn build
 deploy:
   provider: pages
   token: "$GH_TOKEN"
