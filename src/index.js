@@ -42,7 +42,7 @@ footerYear.innerHTML = new Date().getFullYear();
  const loadImage = (image, io) => {
     // Load picture sources
     const parent = image.parentNode;
-    if (parent.nodeName === 'PICTURE') {
+    if (parent.nodeName.toLowerCase() === 'picture') {
         const sources = parent.querySelectorAll('source');
         sources.forEach(s => s.srcset = s.dataset.srcset)
     }
@@ -60,11 +60,12 @@ footerYear.innerHTML = new Date().getFullYear();
     && ('isIntersecting' in window.IntersectionObserverEntry.prototype);
 
 if (supportsIO) {
-    const imageObserver = new IntersectionObserver((entries,) => {
+    const imageObserver = new IntersectionObserver((entries) => {
         entries.filter(e => e.isIntersecting)
-            .forEach(e => loadImage(e.target));
+            .forEach(e => loadImage(e.target, imageObserver));
     });
-    lazyImages.forEach(img => imageObserver.observe(img, imageObserver));
+    lazyImages.forEach(img => imageObserver.observe(img));
 } else {
+    // load all images straight away
     lazyImages.forEach(img => loadImage(img));
 }
