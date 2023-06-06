@@ -26,6 +26,6 @@
     "postcss": "8.4.14",
     "postcss-preset-env": "7.7.1",
     "sass": "1.52.3",
-    "vite": "2.9.12"
+    "vite": "2.9.16"
   }
 }
