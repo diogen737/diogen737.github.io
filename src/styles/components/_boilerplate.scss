@@ -215,7 +215,7 @@ a {
   transition: opacity .3s ease-in;
 }
 
-@media (min-width: $screen-md) {
+@include media-breakpoint-up(md) {
   .vh-md-100 {
     height: 100vh;
   }

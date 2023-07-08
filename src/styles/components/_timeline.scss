@@ -57,7 +57,7 @@
     }
 }
 
-@media (min-width: $screen-md) {
+@include media-breakpoint-up(md) {
     .cv-block.pt-0 > .job-item:first-child {
         padding-top: 2rem;
     }

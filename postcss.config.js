@@ -3,14 +3,17 @@ const cssnano = require('cssnano');
 const postcssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
-    plugins: [
-        postcssPresetEnv(),
-        purgecss({
+  plugins:
+    process.env.NODE_ENV === 'production'
+      ? [
+          postcssPresetEnv(),
+          purgecss({
             content: ['./src/**/*.html'],
             safelist: ['collapsed'],
-        }),
-        cssnano({
+          }),
+          cssnano({
             preset: 'default',
-        }),
-    ]
-}
+          }),
+        ]
+      : [],
+};

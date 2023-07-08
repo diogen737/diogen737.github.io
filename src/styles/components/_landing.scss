@@ -87,31 +87,27 @@
     }
 
     .cv-social {
-        @extend .pt-4;
-
         .btn {
             background-color: $accent-2;
-            margin: 0 .5rem;
-            border-radius: 50%;
 
             &.btn-github {
                 &:hover, &:focus {
                     background-color: $social-github;
                 }
             }
-            &.btn-vk {
-                &:hover, &:focus {
-                    background-color: $social-vk;
-                }
-            }
-            &.btn-xing {
-                &:hover, &:focus {
-                    background-color: $social-xing;
-                }
-            }
             &.btn-linkedin {
                 &:hover, &:focus {
                     background-color: $social-linkedin;
+                }
+            }
+            &.btn-cv {
+                color: $white;
+                padding: 9px 22.5px;
+                font-size: 16px;
+                font-weight: 800;
+
+                &:hover, &:focus {
+                    background-color: $social-cv;
                 }
             }
         }
@@ -147,7 +143,7 @@
 }
 
 
-@media (min-width: $screen-md) {
+@include media-breakpoint-up(md) {
     .cv-image-container .cv-image {
 		max-width: 20rem;
 		width: 90%;
@@ -175,14 +171,14 @@
     }
 }
 
-@media (min-width: $screen-lg) {
+@include media-breakpoint-up(lg) {
     .cv-landing-container .cv-misc {
         flex-direction: row;
         justify-content: space-evenly;
     }
 }
 
-@media (min-width: $screen-xl) {
+@include media-breakpoint-up(xl) {
     .cv-landing-container .cv-misc {
         max-width: 66.6667%;
     }

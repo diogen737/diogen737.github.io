@@ -12,7 +12,7 @@ footer {
     }
 }
 
-@media (min-width: $screen-md) {
+@include media-breakpoint-up(md) {
     footer {
         flex-direction: row;
         justify-content: space-between;
