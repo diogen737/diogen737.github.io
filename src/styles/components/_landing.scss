@@ -27,7 +27,9 @@
             position: relative;
             overflow: hidden;
             transition: all .3s ease-in;
-            padding-bottom: $repository-link-size-mobile;
+            padding-bottom: $repository-link-size-mobile - 10px;
+            padding-left: 10px;
+            padding-right: 10px;
 
             .text {
                 position: absolute;
@@ -153,7 +155,8 @@
         right: 50px;
 
         a {
-            padding-bottom: .5rem;
+            padding-bottom: 7px;
+            padding-left: 1rem;
             padding-right: $repository-link-size;
             align-items: flex-start;
     
@@ -165,7 +168,7 @@
             }
 
             &.collapsed {
-                padding-right: .75rem;
+                padding-right: 1rem;
             }
         }
     }
