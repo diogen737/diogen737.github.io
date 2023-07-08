@@ -27,5 +27,6 @@
     "postcss-preset-env": "7.7.1",
     "sass": "1.52.3",
     "vite": "2.9.12"
-  }
+  },
+  "packageManager": "yarn@3.6.1"
 }
