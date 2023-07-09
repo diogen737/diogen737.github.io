@@ -3,10 +3,6 @@
     padding-bottom: 1.5rem;
 
     .card-link:hover {
-        .card-name {
-            text-decoration: underline;
-        }
-
         img {
             transform: scale(1.1);
         }
@@ -17,7 +13,8 @@
         overflow: hidden;
 
         img {
-            height: auto;
+            height: 180px;
+            object-fit: cover;
             background-color: #fff;
             border-radius: 5px;
             max-width: 100%;
